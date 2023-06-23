@@ -16,9 +16,9 @@ spec:
       labels: 
         app: jenkins
     spec: 
-      Containers: 
+      containers: 
         - name: jenkins-con
-          image:
+          image: jenkins/jenkins:jdk11
           ports: 
             - containerPort: 80
               protocol: TCP
