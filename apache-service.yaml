@@ -1,16 +1,16 @@
 apiVersion: v1
 kind: Service
 metadata: 
-  name: jenkins-svc
+  name: apache-svc
   labels: 
-    purpose: jenkins
+    purpose: apache
 spec: 
   selector: 
-    app: Jenkins
+    app: apache
   type: NodePort
   ports: 
-    - name: jenkins-svc
-      port: 8080
+    - name: apacheS-svc
+      port: 80
       protocol: TCP
-      targetPort: 80
+      targetPort: 8080
       nodePort: 30001
