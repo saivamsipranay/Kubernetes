@@ -14,7 +14,7 @@ spec:
     metadata: 
       name: jenkins-con
       labels: 
-        app: jenkins
+        app: Jenkins
     spec: 
       containers: 
         - name: jenkins-con
