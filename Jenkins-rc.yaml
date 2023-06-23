@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata: 
+  name: Jenkins-pod
+  labels: 
+    app: Jenkins
+spec: 
+  minReadySeconds: 3
+  replicas: 2
+  selector: 
+    matchLabels: 
+      app: Jenkins
+  template: 
+    metadata: 
+      name: jenkins-con
+      labels: 
+        app: jenkins
+    spec: 
+      Container: 
+        - name: jenkins-con
+          image:
+          ports: 
+            - containerPort: 80
+              protocol: TCP
+              
+        
