@@ -6,7 +6,8 @@ metadata:
     purpose: jenkins
 spec: 
   selector: 
-
+    app: Jenkins
+  type: NodePort
   ports: 
     - name: jenkins-svc
       port: 80
